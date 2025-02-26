@@ -39,6 +39,7 @@ ping <dominio o IP>                     # Comprobar conectividad
 
 #### 5. **Gestión de Firewall (ufw)**
 ```sh
+sudo lsof -i -P -n                      # Saber los puertos activos
 sudo ufw status                         # Ver estado del firewall
 sudo ufw enable                         # Activar firewall
 sudo ufw disable                        # Desactivar firewall
@@ -100,5 +101,13 @@ ssh <usuario>@<IP>                       # Conectarse a un servidor remoto por S
 scp <archivo> <usuario>@<IP>:<destino>   # Copiar archivos por SSH
 ```
 
+#### 11. **Gestión de Procesos**
+```sh
+top                                      # Monitorizar procesos en tiempo real
+htop                                     # Alternativa más visual (requiere instalación: sudo apt install htop)
+ps aux | grep <proceso>                  # Buscar un proceso específico
+kill <PID>                               # Terminar un proceso por su ID
+kill -9 <PID>                            # Forzar la terminación de un proceso
+```
 ---
 
